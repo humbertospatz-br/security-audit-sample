@@ -76,6 +76,8 @@ Procure atribuições com valor literal:
 - **Segredo no HISTÓRICO do git** (mesmo que apagado hoje): `git log --all --oneline -- .env` / `git log -p --all -S 'PASSWORD'`. Um segredo que já esteve em qualquer commit continua vazado para quem tem uma cópia do repositório.
 - **Token de acesso embutido na URL do remote:** verifique `git remote -v` e `.git/config`. Uma URL como `https://usuario:ghp_XXXX@github.com/...` expõe uma credencial de acesso ao repositório dentro do próprio `.git`. Reporte MASCARADO (ex.: `ghp_****`). É o único caso em que o `.git` carrega uma chave de acesso.
 - Arquivos de segredo dentro de pasta pública/servível (`public/`, `www/`, `static/`).
+- **Se a pasta do projeto não tiver `.git`:** pule os checks de histórico/remote acima e **registre no
+  Alcance** que a checagem de histórico git não foi feita (não afirme que cobriu o que não cobriu).
 
 ### C3 — SQL Injection (concatenação de input em query)
 Procure query montada com concatenação/interpolação de variável:

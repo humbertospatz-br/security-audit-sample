@@ -34,7 +34,10 @@ roda numa pasta separada, com a **cópia do seu projeto e o kit lado a lado**:
 1. Crie uma pasta nova, ex.: `AUDITORIA-AMOSTRA`.
 2. Copie para dentro dela **a pasta do projeto que você quer auditar** — com o **nome real dela**
    (ex.: `MeuSistema`).
-   - **Copie o `.git` junto** (o histórico é usado para detectar segredos versionados).
+   - **Recomendado: copie o `.git` junto.** O histórico permite detectar segredos que foram commitados
+     (mesmo que apagados depois) e token de acesso embutido na URL do remote. **É opcional** — sem o
+     `.git` a auditoria roda igual, só não faz essa checagem de histórico, e o relatório avisa que ela
+     ficou de fora. (O `.git` **não** dá acesso à sua conta do GitHub — só carrega o histórico do código.)
    - Pode deixar de fora `node_modules/`, `vendor/`, `dist/` (não são analisados mesmo).
 3. Copie **a pasta `audit1-selfservice`** (este kit) para dentro também — **no mesmo nível do projeto**.
 

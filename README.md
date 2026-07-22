@@ -40,8 +40,9 @@ Você precisa do **Claude Code** (CLI, VS Code ou Claude Code App). Passo a pass
 [`audit1-selfservice/LEIA-PRIMEIRO.md`](audit1-selfservice/LEIA-PRIMEIRO.md). Resumo:
 
 1. Crie uma pasta nova (ex.: `AUDITORIA-AMOSTRA`) e copie para dentro dela **a pasta do projeto** que
-   quer auditar — com o **nome real** dela (ex.: `MeuSistema`) e com o `.git`. É uma **cópia isolada**;
-   o original nunca é tocado.
+   quer auditar — com o **nome real** dela (ex.: `MeuSistema`) e, **de preferência, com o `.git`**
+   (recomendado para checar segredos no histórico; **opcional** — sem ele a auditoria roda igual e avisa
+   que a checagem de histórico ficou de fora). É uma **cópia isolada**; o original nunca é tocado.
 2. Copie a pasta `audit1-selfservice` (deste repositório) **no mesmo nível** do projeto:
    ```
    AUDITORIA-AMOSTRA/
@@ -101,8 +102,9 @@ You need **Claude Code** (CLI, VS Code or the Claude Code App). Full walkthrough
 [`audit1-selfservice/LEIA-PRIMEIRO.md`](audit1-selfservice/LEIA-PRIMEIRO.md). In short:
 
 1. Create a new folder (e.g. `AUDIT-SAMPLE`) and copy **the project folder** you want to audit into it —
-   with its **real name** (e.g. `MySystem`) and its `.git`. It's an **isolated copy** — the original is
-   never touched.
+   with its **real name** (e.g. `MySystem`) and, **preferably, its `.git`** (recommended, to check for
+   secrets in history; **optional** — without it the audit still runs and notes that the history check
+   was skipped). It's an **isolated copy** — the original is never touched.
 2. Copy the `audit1-selfservice` folder (from this repo) **at the same level** as the project:
    ```
    AUDIT-SAMPLE/
