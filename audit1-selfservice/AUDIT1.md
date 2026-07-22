@@ -15,10 +15,12 @@
 - **Somente leitura no código do cliente.** Não edite, mova ou apague nada. Só o relatório é escrito.
 
 **Alvo e saída:**
-- **Audite a pasta indicada pelo usuário** (normalmente `projeto/`). Se nenhuma for indicada e existir
-  uma subpasta `projeto/`, use-a. Caso contrário, pergunte qual pasta auditar antes de começar.
-- **Escreva `RELATORIO_AMOSTRA.md` na pasta ONDE VOCÊ FOI ABERTO** (a pasta da auditoria), **fora** da
-  cópia do código — para não sujar o código auditado.
+- **Audite a pasta de projeto indicada pelo usuário** (`<diretorio-projeto>`), que fica no **mesmo
+  nível** deste kit (ex.: `MeuSistema/`). Se nenhuma for indicada, **pergunte qual pasta de projeto
+  auditar** antes de começar — não adivinhe.
+- **NÃO altere, mova ou apague NADA dentro da pasta do projeto** — é somente leitura.
+- **Escreva `RELATORIO_AMOSTRA.md` na pasta ONDE VOCÊ FOI ABERTO** (a raiz da auditoria), **FORA** da
+  pasta do projeto — o projeto fica intacto.
 
 ## REGRA Nº 1 — VERDADE ABSOLUTA
 

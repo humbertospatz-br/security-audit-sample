@@ -29,39 +29,42 @@ Não é a auditoria completa — é a prova de que vale a pena fazer a completa.
 ## Preparação (importante — protege o seu projeto)
 
 Para **não mexer em nada** no seu projeto original nem na configuração do seu Claude, a auditoria
-roda numa pasta separada, sobre uma **cópia** do seu código:
+roda numa pasta separada, com a **cópia do seu projeto e o kit lado a lado**:
 
 1. Crie uma pasta nova, ex.: `AUDITORIA-AMOSTRA`.
-2. Dentro dela, crie `projeto/` e **copie para lá o código que você quer auditar**.
+2. Copie para dentro dela **a pasta do projeto que você quer auditar** — com o **nome real dela**
+   (ex.: `MeuSistema`).
    - **Copie o `.git` junto** (o histórico é usado para detectar segredos versionados).
    - Pode deixar de fora `node_modules/`, `vendor/`, `dist/` (não são analisados mesmo).
-3. Copie a pasta `audit1-selfservice` (este kit) para dentro de `AUDITORIA-AMOSTRA` também.
+3. Copie **a pasta `audit1-selfservice`** (este kit) para dentro também — **no mesmo nível do projeto**.
 
 Deve ficar assim:
 ```
 AUDITORIA-AMOSTRA/
-├── projeto/               <- cópia do seu código (com .git)
-└── audit1-selfservice/    <- este kit
+├── MeuSistema/            <- cópia do seu projeto (nome real, com .git)
+└── audit1-selfservice/    <- este kit (no mesmo nível do projeto)
 ```
 
-> Assim, o que você audita é uma cópia isolada. Seu projeto original e a configuração do seu
-> Claude **não são tocados**.
+> **O audit NÃO altera nada na pasta do projeto.** É **somente leitura** e grava o relatório
+> **FORA** dela — na raiz de `AUDITORIA-AMOSTRA`. Seu projeto (original e cópia) fica intacto.
+> Pode inclusive pôr **vários projetos** lado a lado e auditar um de cada vez.
 
 ## Como rodar (2 formas)
 
-Abra o Claude Code na pasta `AUDITORIA-AMOSTRA`.
+Abra o Claude Code na pasta `AUDITORIA-AMOSTRA` e troque `<diretorio-projeto>` pelo nome da pasta do
+seu projeto (ex.: `MeuSistema`).
 
 **Forma A — mais simples (recomendada):**
 ```
-Leia audit1-selfservice/AUDIT1.md e execute a auditoria na pasta projeto/.
+Leia audit1-selfservice/AUDIT1.md e execute a auditoria na pasta <diretorio-projeto>.
 ```
-Ao final, o relatório estará em `RELATORIO_AMOSTRA.md`, dentro de `AUDITORIA-AMOSTRA` (fora da cópia do código).
+Ao final, o relatório estará em `RELATORIO_AMOSTRA.md`, na raiz de `AUDITORIA-AMOSTRA` (fora da pasta do projeto).
 
 **Forma B — comando:**
 1. Copie `audit1-selfservice/.claude` para dentro de `AUDITORIA-AMOSTRA` (fica `AUDITORIA-AMOSTRA/.claude/commands/audit1.md`).
 2. Rode:
    ```
-   /audit1 projeto/
+   /audit1 <diretorio-projeto>
    ```
 
 ## O que a auditoria vai fazer

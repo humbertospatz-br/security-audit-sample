@@ -39,15 +39,21 @@ ver, em minutos, se o seu sistema esconde riscos sérios.
 Você precisa do **Claude Code** (CLI, VS Code ou Claude Code App). Passo a passo completo em
 [`audit1-selfservice/LEIA-PRIMEIRO.md`](audit1-selfservice/LEIA-PRIMEIRO.md). Resumo:
 
-1. Crie uma pasta nova (ex.: `AUDITORIA-AMOSTRA`) e copie para dentro dela, em `projeto/`, o código que
-   quer auditar (com o `.git`). Assim você trabalha numa **cópia isolada** — o original nunca é tocado.
-2. Copie a pasta `audit1-selfservice` (deste repositório) para o lado.
-3. Abra o Claude Code nessa pasta e rode:
+1. Crie uma pasta nova (ex.: `AUDITORIA-AMOSTRA`) e copie para dentro dela **a pasta do projeto** que
+   quer auditar — com o **nome real** dela (ex.: `MeuSistema`) e com o `.git`. É uma **cópia isolada**;
+   o original nunca é tocado.
+2. Copie a pasta `audit1-selfservice` (deste repositório) **no mesmo nível** do projeto:
    ```
-   Leia audit1-selfservice/AUDIT1.md e execute a auditoria na pasta projeto/.
+   AUDITORIA-AMOSTRA/
+   ├── MeuSistema/            <- seu projeto (nome real, com .git)
+   └── audit1-selfservice/    <- este kit
    ```
-4. O resultado é um arquivo **`RELATORIO_AMOSTRA.md`** com até **2 problemas encontrados** (se houver),
-   já indicando a gravidade.
+3. Abra o Claude Code nessa pasta e rode (troque `<diretorio-projeto>` pelo nome real, ex.: `MeuSistema`):
+   ```
+   Leia audit1-selfservice/AUDIT1.md e execute a auditoria na pasta <diretorio-projeto>.
+   ```
+4. O resultado é **`RELATORIO_AMOSTRA.md`**, gerado **fora** da pasta do projeto (o projeto **não é
+   tocado** — somente leitura), com até **2 problemas encontrados** (se houver) e a gravidade.
 
 ### Quer a auditoria completa?
 
@@ -89,15 +95,21 @@ hiding serious risks.
 You need **Claude Code** (CLI, VS Code or the Claude Code App). Full walkthrough in
 [`audit1-selfservice/LEIA-PRIMEIRO.md`](audit1-selfservice/LEIA-PRIMEIRO.md). In short:
 
-1. Create a new folder (e.g. `AUDIT-SAMPLE`) and copy the code you want to audit into `projeto/` inside
-   it (with its `.git`). You work on an **isolated copy** — the original is never touched.
-2. Copy the `audit1-selfservice` folder (from this repo) next to it.
-3. Open Claude Code in that folder and run:
+1. Create a new folder (e.g. `AUDIT-SAMPLE`) and copy **the project folder** you want to audit into it —
+   with its **real name** (e.g. `MySystem`) and its `.git`. It's an **isolated copy** — the original is
+   never touched.
+2. Copy the `audit1-selfservice` folder (from this repo) **at the same level** as the project:
    ```
-   Read audit1-selfservice/AUDIT1.md and run the audit on the projeto/ folder.
+   AUDIT-SAMPLE/
+   ├── MySystem/              <- your project (real name, with .git)
+   └── audit1-selfservice/    <- this kit
    ```
-4. The output is a **`RELATORIO_AMOSTRA.md`** file with up to **2 issues found** (if any), already
-   flagging the severity.
+3. Open Claude Code in that folder and run (replace `<project-dir>` with the real name, e.g. `MySystem`):
+   ```
+   Read audit1-selfservice/AUDIT1.md and run the audit on the <project-dir> folder.
+   ```
+4. The output is **`RELATORIO_AMOSTRA.md`**, generated **outside** the project folder (the project is
+   **never touched** — read-only), with up to **2 issues found** (if any) and the severity.
 
 ### Want the full audit?
 
