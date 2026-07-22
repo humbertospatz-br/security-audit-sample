@@ -71,6 +71,8 @@ Procure atribuições com valor literal:
 
 ### C2 — `.env` / arquivo de segredos versionado ou exposto
 - Existe `.env` (ou `secrets.*`, `credentials.*`) **rastreado pelo git**? Confira `.gitignore` e, se houver git, `git ls-files | grep -E '\.env$'`.
+- **Segredo no HISTÓRICO do git** (mesmo que apagado hoje): `git log --all --oneline -- .env` / `git log -p --all -S 'PASSWORD'`. Um segredo que já esteve em qualquer commit continua vazado para quem tem uma cópia do repositório.
+- **Token de acesso embutido na URL do remote:** verifique `git remote -v` e `.git/config`. Uma URL como `https://usuario:ghp_XXXX@github.com/...` expõe uma credencial de acesso ao repositório dentro do próprio `.git`. Reporte MASCARADO (ex.: `ghp_****`). É o único caso em que o `.git` carrega uma chave de acesso.
 - Arquivos de segredo dentro de pasta pública/servível (`public/`, `www/`, `static/`).
 
 ### C3 — SQL Injection (concatenação de input em query)
