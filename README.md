@@ -99,7 +99,7 @@ hiding serious risks.
 ### How to use
 
 You need **Claude Code** (CLI, VS Code or the Claude Code App). Full walkthrough in
-[`audit1-selfservice/LEIA-PRIMEIRO.md`](audit1-selfservice/LEIA-PRIMEIRO.md). In short:
+[`audit1-selfservice/READ-FIRST.md`](audit1-selfservice/READ-FIRST.md). In short:
 
 1. Create a new folder (e.g. `AUDIT-SAMPLE`) and copy **the project folder** you want to audit into it —
    with its **real name** (e.g. `MySystem`) and, **preferably, its `.git`** (recommended, to check for
