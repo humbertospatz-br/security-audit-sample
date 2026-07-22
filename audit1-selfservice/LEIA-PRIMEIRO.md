@@ -84,6 +84,12 @@ AUDITORIA-AMOSTRA/
 ```
 Como cada relatório leva o nome do projeto (`RELATORIO_AMOSTRA_<projeto>.md`), **um não sobrescreve o outro**.
 
+### Se a sessão do Claude acabar no meio
+
+Sem problema: **rode o mesmo comando de novo** que ele **retoma de onde parou**. O que já foi encontrado
+fica salvo no relatório à medida que a auditoria avança — nada se perde se a sessão cortar (ex.: por
+limite de uso do seu plano).
+
 ## O que a auditoria vai fazer
 
 - Ler seus arquivos de código (somente leitura — **não altera nada**).

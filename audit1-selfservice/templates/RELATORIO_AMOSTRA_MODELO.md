@@ -72,3 +72,6 @@ Humberto Spatz — humberto@spatz.com.br
 
 *Amostra executada no ambiente do cliente. Relatório local — não enviado aos consultores nem publicado.
 Processamento do Claude conforme a política de dados da Anthropic da conta utilizada.*
+
+<!-- checks feitos: C1 C2 C3 C4 C5 C6 C7 | status: concluido -->
+

@@ -44,6 +44,22 @@ perigo já visto.
 
 ---
 
+## CONTINUIDADE — captura durável e retomada (a sessão pode acabar)
+
+A sessão de IA pode cortar no meio (limite de uso/plano). O achado não pode se perder por isso.
+
+- **Retomada:** ANTES de começar, veja se já existe `RELATORIO_AMOSTRA_<projeto>.md` para este projeto.
+  - Se estiver marcado **concluído** (2 críticos ou varredura terminada) → não refaça; informe que já existe.
+  - Se estiver **parcial** → continue de onde parou: NÃO refaça os checks já feitos nem reconte críticos
+    já achados; retome pelos checks que faltam (veja a linha "checks feitos" no rodapé do relatório).
+- **Captura durável:** assim que confirmar um crítico, **grave-o JÁ** no relatório (não espere o fim).
+  Se a sessão cortar, o que foi achado está salvo.
+- **Sem barreira frágil no fim:** o relatório é montado incrementalmente; o PASSO 5 só finaliza (nota,
+  isca, alcance) o que já foi sendo gravado.
+- **Marcador de progresso:** mantenha no rodapé do relatório uma linha `<!-- checks feitos: C1 C2 ... | status: parcial|concluido -->` e atualize a cada check.
+
+---
+
 ## PASSO 1 — Reconhecimento (rápido)
 
 1. Identifique a stack: liste linguagens e frameworks (olhe extensões de arquivo, `package.json`,
@@ -132,7 +148,8 @@ Regra simples e honesta:
 
 Escreva na pasta da auditoria (onde você foi aberto, fora da cópia do código), com o nome
 `RELATORIO_AMOSTRA_<projeto>.md` (o `<projeto>` é o nome da pasta auditada), seguindo o modelo em
-`audit1-selfservice/templates/RELATORIO_AMOSTRA_MODELO.md`.
+`audit1-selfservice/templates/RELATORIO_AMOSTRA_MODELO.md`. Aqui você **finaliza** (nota, isca, alcance)
+o relatório que já vinha sendo gravado incrementalmente (ver CONTINUIDADE).
 
 **Mecânica da amostra (isca):**
 - **1º crítico:** mostre COMPLETO — o quê, onde (`arquivo:linha`), evidência mascarada, o risco em
@@ -151,7 +168,7 @@ Escreva na pasta da auditoria (onde você foi aberto, fora da cópia do código)
 
 ## PASSO 6 — Encerramento
 
-Ao terminar, diga ao usuário:
+Ao terminar, **marque o rodapé do relatório como `status: concluido`** e diga ao usuário:
 1. Onde está o relatório (`RELATORIO_AMOSTRA_<projeto>.md`).
 2. Quantos críticos foram encontrados (número real).
 3. Lembre que o relatório é **local** e que **nada foi enviado aos consultores nem publicado**

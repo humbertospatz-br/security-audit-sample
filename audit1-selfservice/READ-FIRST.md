@@ -85,6 +85,12 @@ AUDIT-SAMPLE/
 Since each report is named after its project (`RELATORIO_AMOSTRA_<project>.md`), **one never overwrites
 the other**.
 
+### If the Claude session ends mid-run
+
+No problem: **run the same command again** and it **resumes where it left off**. Whatever was already
+found is saved to the report as the audit progresses — nothing is lost if the session is cut (e.g. by
+your plan's usage limit).
+
 ## What the audit will do
 
 - Read your code files (read-only — **it changes nothing**).
