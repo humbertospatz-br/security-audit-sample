@@ -52,8 +52,13 @@ Você precisa do **Claude Code** (CLI, VS Code ou Claude Code App). Passo a pass
    ```
    Leia audit1-selfservice/AUDIT1.md e execute a auditoria na pasta <diretorio-projeto>.
    ```
-4. O resultado é **`RELATORIO_AMOSTRA.md`**, gerado **fora** da pasta do projeto (o projeto **não é
-   tocado** — somente leitura), com até **2 problemas encontrados** (se houver) e a gravidade.
+4. O resultado é **`RELATORIO_AMOSTRA_<projeto>.md`** (ex.: `RELATORIO_AMOSTRA_MeuSistema.md`), gerado
+   **fora** da pasta do projeto (o projeto **não é tocado** — somente leitura), com até **2 problemas
+   encontrados** (se houver) e a gravidade.
+
+> **Vários projetos?** Não precisa apagar nada nem criar outra pasta: copie o próximo projeto (ex.:
+> `MeuSistema2`) para a mesma pasta, ao lado, e rode apontando pra ele. Como o relatório leva o nome do
+> projeto, um não sobrescreve o outro.
 
 ### Quer a auditoria completa?
 
@@ -108,8 +113,13 @@ You need **Claude Code** (CLI, VS Code or the Claude Code App). Full walkthrough
    ```
    Read audit1-selfservice/AUDIT1.md and run the audit on the <project-dir> folder.
    ```
-4. The output is **`RELATORIO_AMOSTRA.md`**, generated **outside** the project folder (the project is
-   **never touched** — read-only), with up to **2 issues found** (if any) and the severity.
+4. The output is **`RELATORIO_AMOSTRA_<project>.md`** (e.g. `RELATORIO_AMOSTRA_MySystem.md`), generated
+   **outside** the project folder (the project is **never touched** — read-only), with up to **2 issues
+   found** (if any) and the severity.
+
+> **Multiple projects?** No need to delete anything or create another folder: copy the next project
+> (e.g. `MySystem2`) into the same folder, side by side, and run pointing at it. Since each report is
+> named after its project, one never overwrites another.
 
 ### Want the full audit?
 

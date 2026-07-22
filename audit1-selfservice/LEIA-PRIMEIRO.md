@@ -58,7 +58,7 @@ seu projeto (ex.: `MeuSistema`).
 ```
 Leia audit1-selfservice/AUDIT1.md e execute a auditoria na pasta <diretorio-projeto>.
 ```
-Ao final, o relatório estará em `RELATORIO_AMOSTRA.md`, na raiz de `AUDITORIA-AMOSTRA` (fora da pasta do projeto).
+Ao final, o relatório estará em `RELATORIO_AMOSTRA_<projeto>.md` (ex.: `RELATORIO_AMOSTRA_MeuSistema.md`), na raiz de `AUDITORIA-AMOSTRA` (fora da pasta do projeto).
 
 **Forma B — comando:**
 1. Copie `audit1-selfservice/.claude` para dentro de `AUDITORIA-AMOSTRA` (fica `AUDITORIA-AMOSTRA/.claude/commands/audit1.md`).
@@ -67,12 +67,26 @@ Ao final, o relatório estará em `RELATORIO_AMOSTRA.md`, na raiz de `AUDITORIA-
    /audit1 <diretorio-projeto>
    ```
 
+### Auditar mais de um projeto
+
+Não precisa apagar nada nem criar outra pasta. Basta **copiar o novo projeto** (ex.: `MeuSistema2`)
+para dentro da mesma `AUDITORIA-AMOSTRA`, ao lado do primeiro, e rodar de novo apontando pra ele:
+```
+AUDITORIA-AMOSTRA/
+├── MeuSistema/                        (já auditado)
+├── MeuSistema2/                       <- novo projeto
+├── audit1-selfservice/
+├── RELATORIO_AMOSTRA_MeuSistema.md    (relatório do 1º — preservado)
+└── RELATORIO_AMOSTRA_MeuSistema2.md   (relatório do 2º)
+```
+Como cada relatório leva o nome do projeto (`RELATORIO_AMOSTRA_<projeto>.md`), **um não sobrescreve o outro**.
+
 ## O que a auditoria vai fazer
 
 - Ler seus arquivos de código (somente leitura — **não altera nada**).
 - Procurar problemas críticos de segurança e lógica.
 - **Parar assim que confirmar os 2 primeiros críticos** (é uma amostra, não a varredura completa).
-- Gerar um relatório de 1 página, em linguagem clara, em `RELATORIO_AMOSTRA.md`.
+- Gerar um relatório de 1 página, em linguagem clara, em `RELATORIO_AMOSTRA_<projeto>.md`.
 
 ## O que a auditoria NÃO vai fazer
 

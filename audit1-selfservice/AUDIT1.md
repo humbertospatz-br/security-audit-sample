@@ -19,8 +19,10 @@
   nível** deste kit (ex.: `MeuSistema/`). Se nenhuma for indicada, **pergunte qual pasta de projeto
   auditar** antes de começar — não adivinhe.
 - **NÃO altere, mova ou apague NADA dentro da pasta do projeto** — é somente leitura.
-- **Escreva `RELATORIO_AMOSTRA.md` na pasta ONDE VOCÊ FOI ABERTO** (a raiz da auditoria), **FORA** da
-  pasta do projeto — o projeto fica intacto.
+- **Escreva o relatório na pasta ONDE VOCÊ FOI ABERTO** (a raiz da auditoria), **FORA** da pasta do
+  projeto — o projeto fica intacto. **O nome do arquivo inclui o projeto: `RELATORIO_AMOSTRA_<projeto>.md`**
+  (ex.: projeto `MeuSistema/` → `RELATORIO_AMOSTRA_MeuSistema.md`). Assim vários projetos podem ser
+  auditados na mesma pasta sem um sobrescrever o relatório do outro.
 
 ## REGRA Nº 1 — VERDADE ABSOLUTA
 
@@ -124,9 +126,10 @@ Regra simples e honesta:
 
 ---
 
-## PASSO 5 — Gerar `RELATORIO_AMOSTRA.md`
+## PASSO 5 — Gerar `RELATORIO_AMOSTRA_<projeto>.md`
 
-Escreva na pasta da auditoria (onde você foi aberto, fora da cópia do código), seguindo o modelo em
+Escreva na pasta da auditoria (onde você foi aberto, fora da cópia do código), com o nome
+`RELATORIO_AMOSTRA_<projeto>.md` (o `<projeto>` é o nome da pasta auditada), seguindo o modelo em
 `audit1-selfservice/templates/RELATORIO_AMOSTRA_MODELO.md`.
 
 **Mecânica da amostra (isca):**
@@ -147,7 +150,7 @@ Escreva na pasta da auditoria (onde você foi aberto, fora da cópia do código)
 ## PASSO 6 — Encerramento
 
 Ao terminar, diga ao usuário:
-1. Onde está o relatório (`RELATORIO_AMOSTRA.md`).
+1. Onde está o relatório (`RELATORIO_AMOSTRA_<projeto>.md`).
 2. Quantos críticos foram encontrados (número real).
 3. Lembre que o relatório é **local** e que **nada foi enviado aos consultores nem publicado**
    (o processamento normal do Claude pela Anthropic segue a política de dados da conta dele).
