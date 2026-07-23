@@ -5,6 +5,7 @@ vendor
 bower_components
 packages
 vcl
+PHPMailer
 dist
 build
 out

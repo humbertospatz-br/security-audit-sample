@@ -1,0 +1,18 @@
+# Padroes de ARQUIVO (glob) que NAO contam — libs soltas no meio do codigo proprio.
+# O exclude por DIRETORIO nao pega lib que e um arquivo unico jogado na arvore.
+# Um padrao por linha (fnmatch: * e ? funcionam). Adicione o que reconhecer.
+*.min.js
+Chart*.js
+chart.js
+class.phpmailer.php
+PHPMailer*.php
+xajax*.js
+wz_*.js
+tip_*.js
+tooltip*.js
+calendar.js
+jquery*.js
+bootstrap*.js
+select2*.js
+moment*.js
+lodash*.js
