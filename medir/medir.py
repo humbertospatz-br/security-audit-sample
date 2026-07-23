@@ -23,6 +23,7 @@ EXT_LANG = {
     ".pas": "Delphi/Pascal", ".dpr": "Delphi/Pascal", ".dpk": "Delphi/Pascal",
     ".vb": "VB.NET",
     ".cob": "COBOL", ".cbl": "COBOL", ".cpy": "COBOL", ".cobol": "COBOL",
+    ".b4a": "B4X", ".b4i": "B4X", ".b4j": "B4X", ".bas": "B4X (mobile)",
 }
 CONTATO = "Humberto Spatz — humberto@spatz.com.br"
 
