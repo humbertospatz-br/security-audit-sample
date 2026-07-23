@@ -20,6 +20,8 @@ EXT_LANG = {
     ".cs": "C#/.NET", ".go": "Go", ".java": "Java", ".kt": "Kotlin",
     ".c": "C", ".h": "C", ".cpp": "C++", ".cc": "C++", ".hpp": "C++",
     ".rs": "Rust", ".swift": "Swift", ".sql": "SQL",
+    ".pas": "Delphi/Pascal", ".dpr": "Delphi/Pascal", ".dpk": "Delphi/Pascal",
+    ".vb": "VB.NET",
 }
 CONTATO = "Humberto Spatz — humberto@spatz.com.br"
 
