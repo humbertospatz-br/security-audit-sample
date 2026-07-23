@@ -1,0 +1,20 @@
+# Diretorios de framework / terceiro / gerado — NAO contam no SLOC proprio.
+# Um por linha (nome do diretorio). Adicione o que reconhecer no seu projeto.
+node_modules
+vendor
+bower_components
+packages
+vcl
+dist
+build
+out
+obj
+bin
+.next
+.nuxt
+__pycache__
+.venv
+venv
+.git
+coverage
+.cache

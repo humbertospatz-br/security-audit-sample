@@ -66,6 +66,10 @@ Você precisa do **Claude Code** (CLI, VS Code ou Claude Code App). Passo a pass
 A amostra é só o começo. A auditoria completa cobre **segurança, lógica de funcionamento, banco de dados
 e infraestrutura**, com verificação dupla de cada achado e plano de correção priorizado.
 
+**Quer saber o tamanho do seu sistema (para orçamento)?** Rode [`medir/medir.py`](medir/) — é **aberto**
+(leia e rode você mesmo), conta só o código próprio e **não mostra preço**: envie o número e receba seu
+orçamento. A medição é transparente; só a régua da auditoria é protegida.
+
 📩 **Contato:** Humberto Spatz — humberto@spatz.com.br
 
 ---
